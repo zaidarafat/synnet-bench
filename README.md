@@ -1,5 +1,7 @@
 # SynNet-Bench
 
+[![DOI](https://zenodo.org/badge/1432234865.svg)](https://doi.org/10.5281/zenodo.23620121)
+
 The unified code and benchmark for the book **_Generative Adversarial Networks for Network Intrusion Detection: Synthetic Data, Rigorous Evaluation, and Trust_** (Z. Arafat, Z. A. Abdulazeez).
 
 One library, one interface, one evaluation protocol. Every generator in the book is built on the same `fit`/`sample` interface, and every benchmark run follows the same leakage-safe protocol so that results are comparable and reproducible. The companion scripts reproduce every number in the book.
@@ -90,4 +92,4 @@ MIT (code). Datasets are not redistributed and retain their own licenses and cit
 
 ## Citation
 
-> Z. Arafat and Z. A. Abdulazeez, *Generative Adversarial Networks for Network Intrusion Detection: Synthetic Data, Rigorous Evaluation, and Trust*, 2026.
+> Z. Arafat and Z. A. Abdulazeez, *SynNet-Bench: companion code for "Generative Adversarial Networks for Network Intrusion Detection,"* 2026. DOI: 10.5281/zenodo.23620121.
