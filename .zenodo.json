@@ -5,7 +5,7 @@
   "license": "MIT",
   "creators": [
     {"name": "Arafat, Zaid", "orcid": "0009-0001-0886-5370", "affiliation": "College of Computer Science and Information Technology, University of Kerbala, Karbala, Iraq"},
-    {"name": "Abdulazeez, Zainab A.", "affiliation": "University of Kerbala, Karbala, Iraq"}
+    {"name": "Abdulazeez, Zainab A.", "orcid": "0009-0004-9801-4888", "affiliation": "College of Education for Human Sciences, University of Kerbala, Karbala, Iraq"}
   ],
   "keywords": [
     "generative adversarial networks", "synthetic data", "network intrusion detection",

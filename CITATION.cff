@@ -10,7 +10,9 @@ authors:
     affiliation: "College of Computer Science and Information Technology, University of Kerbala, Karbala 56001, Iraq"
   - given-names: "Zainab A."
     family-names: Abdulazeez
-    affiliation: "University of Kerbala, Karbala, Iraq"
+    email: zainab.abdulhameed@uokerbala.edu.iq
+    orcid: "https://orcid.org/0009-0004-9801-4888"
+    affiliation: "College of Education for Human Sciences, University of Kerbala, Karbala, Iraq"
 repository-code: "https://github.com/zaidarafat/synnet-bench"
 license: MIT
 doi: "10.5281/zenodo.23620121"
