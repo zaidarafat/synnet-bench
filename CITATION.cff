@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "SynNet-Bench: companion code and benchmark for Generative Adversarial Networks for Network Intrusion Detection"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - given-names: Zaid
+    family-names: Arafat
+    email: zaid.q@uokerbala.edu.iq
+    orcid: "https://orcid.org/0009-0001-0886-5370"
+    affiliation: "College of Computer Science and Information Technology, University of Kerbala, Karbala 56001, Iraq"
+  - given-names: Mikhail
+    family-names: Ronkin
+    email: m.v.ronkin@urfu.ru
+    orcid: "https://orcid.org/0000-0001-5522-988X"
+    affiliation: "Engineering School of Information Technologies, Telecommunications and Control Systems, Ural Federal University named after the First President of Russia B. N. Yeltsin, Yekaterinburg 620078, Russia"
+repository-code: "https://github.com/zaidarafat/synnet-bench"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-24"
+keywords:
+  - generative adversarial networks
+  - synthetic data
+  - network intrusion detection
+  - tabular data generation
+  - benchmark
+  - reproducibility
+  - differential privacy

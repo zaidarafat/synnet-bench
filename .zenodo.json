@@ -1,0 +1,17 @@
+{
+  "title": "SynNet-Bench: companion code and benchmark for Generative Adversarial Networks for Network Intrusion Detection",
+  "description": "Unified library and benchmark for GAN-based synthetic data in network intrusion detection: a single fit/sample interface for the models (GAN, WGAN-GP, conditional WGAN-GP, TVAE), a leakage-safe NSL-KDD data layer, a unified fidelity/utility/privacy metrics module, per-chapter companion scripts, and automated tests that fail on data leakage. Companion code to the book of the same name.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {"name": "Arafat, Zaid", "orcid": "0009-0001-0886-5370", "affiliation": "College of Computer Science and Information Technology, University of Kerbala, Karbala, Iraq"},
+    {"name": "Ronkin, Mikhail", "orcid": "0000-0001-5522-988X", "affiliation": "Ural Federal University named after the First President of Russia B. N. Yeltsin, Yekaterinburg, Russia"}
+  ],
+  "keywords": [
+    "generative adversarial networks", "synthetic data", "network intrusion detection",
+    "tabular data generation", "benchmark", "reproducibility", "differential privacy"
+  ],
+  "related_identifiers": [
+    {"relation": "isSupplementTo", "identifier": "https://github.com/zaidarafat/synnet-bench", "scheme": "url"}
+  ]
+}
