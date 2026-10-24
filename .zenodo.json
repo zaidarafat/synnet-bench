@@ -5,7 +5,7 @@
   "license": "MIT",
   "creators": [
     {"name": "Arafat, Zaid", "orcid": "0009-0001-0886-5370", "affiliation": "College of Computer Science and Information Technology, University of Kerbala, Karbala, Iraq"},
-    {"name": "Ronkin, Mikhail", "orcid": "0000-0001-5522-988X", "affiliation": "Ural Federal University named after the First President of Russia B. N. Yeltsin, Yekaterinburg, Russia"}
+    {"name": "Abdulazeez, Zainab A.", "affiliation": "University of Kerbala, Karbala, Iraq"}
   ],
   "keywords": [
     "generative adversarial networks", "synthetic data", "network intrusion detection",

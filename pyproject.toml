@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
   { name = "Zaid Arafat", email = "zaid.q@uokerbala.edu.iq" },
-  { name = "Mikhail Ronkin", email = "m.v.ronkin@urfu.ru" },
+  { name = "Zainab A. Abdulazeez" },
 ]
 dependencies = [
   "torch==2.14.1", "numpy==2.5.3", "pandas==2.3.3", "scikit-learn==1.9.1",

@@ -1,6 +1,6 @@
 # SynNet-Bench
 
-The unified code and benchmark for the book **_Generative Adversarial Networks for Network Intrusion Detection: Synthetic Data, Rigorous Evaluation, and Trust_** (Z. Arafat, M. Ronkin).
+The unified code and benchmark for the book **_Generative Adversarial Networks for Network Intrusion Detection: Synthetic Data, Rigorous Evaluation, and Trust_** (Z. Arafat, Z. A. Abdulazeez).
 
 One library, one interface, one evaluation protocol. Every generator in the book is built on the same `fit`/`sample` interface, and every benchmark run follows the same leakage-safe protocol so that results are comparable and reproducible. The companion scripts reproduce every number in the book.
 
@@ -90,4 +90,4 @@ MIT (code). Datasets are not redistributed and retain their own licenses and cit
 
 ## Citation
 
-> Z. Arafat and M. Ronkin, *Generative Adversarial Networks for Network Intrusion Detection: Synthetic Data, Rigorous Evaluation, and Trust*, 2026.
+> Z. Arafat and Z. A. Abdulazeez, *Generative Adversarial Networks for Network Intrusion Detection: Synthetic Data, Rigorous Evaluation, and Trust*, 2026.
