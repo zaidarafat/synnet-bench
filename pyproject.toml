@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synnet-bench"
+version = "1.0.0"
+description = "Unified library and benchmark for GAN-based synthetic data in network intrusion detection"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Zaid Arafat", email = "zaid.q@uokerbala.edu.iq" },
+  { name = "Mikhail Ronkin", email = "m.v.ronkin@urfu.ru" },
+]
+dependencies = [
+  "torch==2.14.1", "numpy==2.5.3", "pandas==2.3.3", "scikit-learn==1.9.1",
+  "scipy==1.18.1", "imbalanced-learn==0.14.2", "ctgan==0.12.1", "shap==0.54.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["synnet*"]

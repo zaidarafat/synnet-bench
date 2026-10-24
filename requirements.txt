@@ -1,0 +1,12 @@
+# Pinned to the versions the book's results were produced with.
+# Install torch from the CPU wheel index if you have no GPU:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1
+numpy==2.5.3
+pandas==2.3.3
+scikit-learn==1.9.1
+scipy==1.18.1
+imbalanced-learn==0.14.2
+ctgan==0.12.1
+shap==0.54.1
+pytest==8.3.4

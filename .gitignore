@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+out/
+runs/
+*.docx
+*.pdf
+# datasets are not redistributed
+data/nslkdd/
+*.csv
+*.txt
+!requirements.txt
