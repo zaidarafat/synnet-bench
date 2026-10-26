@@ -25,7 +25,7 @@ sys.argv = ["ch07_tabular.py", "worker", "99", "100"]
 _src = CH07.read_text()
 exec(_src[:_src.rindex('if MODE in ("all", "worker")')])   # REAL, TEST, DISCRETE, CONTINUOUS, SMALL_INT, fit_sample_copula...
 OUT = Path("out"); OUT.mkdir(exist_ok=True)
-SEEDS = [0, 1, 2]
+SEEDS = list(range(10))
 RESULTS = {}
 
 # %% [markdown]
@@ -88,16 +88,21 @@ def exact_copy_rate(syn, members):
     return float(np.mean([k in keys for k in syn.astype(str).agg("|".join, axis=1)]))
 
 # %%
+RUNS = OUT / "runs"; RUNS.mkdir(exist_ok=True)
+def one(kind, seed):
+    p = RUNS / f"{kind}_{seed}.json"
+    if p.exists(): return json.loads(p.read_text())
+    members, nonmembers = train_test_split(REAL, test_size=0.5, stratify=REAL["category"], random_state=seed)
+    members = members.reset_index(drop=True); nonmembers = nonmembers.reset_index(drop=True)
+    enc = Enc(members)
+    t0 = time.time(); syn = generate(kind, members, len(members), seed)
+    mem = members.sample(min(3000, len(members)), random_state=seed); non = nonmembers.sample(min(3000, len(nonmembers)), random_state=seed)
+    res = {"attack_auc": attack_auc(syn, mem, non, enc), "exact_copies": exact_copy_rate(syn, members), "seconds": time.time() - t0}
+    p.write_text(json.dumps(res)); print(f"  {kind} seed {seed} done [{res['seconds']:.0f}s]", flush=True)
+    return res
+
 for kind in ["smote", "copula", "tvae"]:
-    rows = []
-    for seed in SEEDS:
-        members, nonmembers = train_test_split(REAL, test_size=0.5, stratify=REAL["category"], random_state=seed)
-        members = members.reset_index(drop=True); nonmembers = nonmembers.reset_index(drop=True)
-        enc = Enc(members)
-        t0 = time.time(); syn = generate(kind, members, len(members), seed)
-        mem = members.sample(min(3000, len(members)), random_state=seed); non = nonmembers.sample(min(3000, len(nonmembers)), random_state=seed)
-        auc = attack_auc(syn, mem, non, enc); cp = exact_copy_rate(syn, members)
-        rows.append({"attack_auc": auc, "exact_copies": cp, "seconds": time.time() - t0})
+    rows = [one(kind, seed) for seed in SEEDS]
     RESULTS[kind] = rows
     f = lambda k, d=3: f"{np.mean([r[k] for r in rows]):.{d}f} ± {np.std([r[k] for r in rows], ddof=1):.{d}f}"
     print(f"{kind:7s} membership-inference AUC {f('attack_auc')}  exact copies {f('exact_copies',3)}  time {np.mean([r['seconds'] for r in rows]):.0f}s", flush=True)

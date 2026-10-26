@@ -29,7 +29,7 @@ warnings.filterwarnings("ignore")
 DATA = Path("/home/claude/data/nslkdd/KDDTrain+.txt")
 OUT = Path("out"); OUT.mkdir(exist_ok=True)
 RUNS = OUT / "runs"; RUNS.mkdir(exist_ok=True)
-SEEDS = [0, 1, 2]
+SEEDS = list(range(10))
 MODE = sys.argv[1] if len(sys.argv) > 1 else "all"
 torch.set_num_threads(1)
 CATEGORY = {"normal": "normal",
